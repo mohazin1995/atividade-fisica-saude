@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MoveBem: uma página educativa e interativa sobre atividade física e saúde.">
+  <meta name="theme-color" content="#173d36">
+  <title>MoveBem | Atividade física e saúde</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23dff36a'/%3E%3Cpath d='M16 35h10l5-15 7 27 5-12h6' fill='none' stroke='%23173d36' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="MoveBem — página inicial">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40">
+            <path d="M7 22h7l3.5-10 5 18 3.5-8H33"/>
+          </svg>
+        </span>
+        <span>MoveBem</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#comecar">Como começar</a>
+        <a href="#calculadora">Meu ritmo</a>
+        <a class="nav-cta" href="#dica">Dica do dia</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-shape hero-shape-one" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Saúde em movimento</p>
+          <h1>Seu corpo foi feito para <em>se mover.</em></h1>
+          <p class="hero-text">Pequenas escolhas ativas ajudam a cuidar do corpo, da mente e da sua energia. Descubra um ritmo possível para a sua rotina.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#calculadora">
+              Calcular meu ritmo
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="text-link" href="#beneficios">Entender os benefícios <span aria-hidden="true">↓</span></a>
+          </div>
+          <ul class="hero-notes" aria-label="Características da página">
+            <li><span aria-hidden="true">✓</span> Simples</li>
+            <li><span aria-hidden="true">✓</span> Gratuito</li>
+            <li><span aria-hidden="true">✓</span> No seu ritmo</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Ilustração de uma pessoa caminhando em um parque">
+          <div class="sun" aria-hidden="true"></div>
+          <svg class="hero-illustration" viewBox="0 0 560 520" role="img" aria-labelledby="ilustracao-titulo ilustracao-desc">
+            <title id="ilustracao-titulo">Pessoa praticando caminhada</title>
+            <desc id="ilustracao-desc">Ilustração colorida de uma pessoa caminhando ao ar livre entre plantas.</desc>
+            <path class="ground-back" d="M31 447c65-74 117-81 177-35 62 47 115 46 177-9 51-45 101-37 144 44H31z"/>
+            <path class="leaf leaf-a" d="M93 400c-34-34-33-72-27-106 36 17 51 50 27 106z"/>
+            <path class="leaf leaf-b" d="M112 405c-1-45 24-76 51-96 15 37 1 72-51 96z"/>
+            <path class="leaf-line" d="M90 333l17 91M137 341l-30 83"/>
+            <path class="leaf leaf-c" d="M450 407c-20-39-8-73 8-101 28 26 31 60-8 101z"/>
+            <path class="leaf leaf-d" d="M469 415c13-39 43-58 71-66 2 36-20 61-71 66z"/>
+            <path class="leaf-line" d="M462 339l-4 87M508 371l-50 55"/>
+            <ellipse class="shadow" cx="283" cy="449" rx="130" ry="20"/>
+            <g class="walker">
+              <path class="skin" d="M293 111c20 0 36 16 36 36 0 11-5 21-13 28l-4 25-44-4 7-29c-8-7-13-17-13-29 0-16 13-27 31-27z"/>
+              <path class="hair" d="M265 146c-8-22 3-48 31-49 25-1 41 17 38 38-11-4-20-12-26-23-9 15-24 26-43 34z"/>
+              <path class="shirt" d="M266 185c18-10 45-8 59 5 11 10 19 48 24 87l-64 15-27-67c-8-21-4-33 8-40z"/>
+              <path class="arm skin-stroke" d="M318 205c11 20 20 38 34 52 12 12 29 21 48 27"/>
+              <path class="arm skin-stroke" d="M270 208c-8 24-16 44-28 58-9 10-22 18-37 23"/>
+              <path class="shorts" d="M284 275l67-9 13 71-40 5-10-28-9 30-41-4z"/>
+              <path class="leg skin-stroke" d="M337 332c8 32 20 64 42 96"/>
+              <path class="leg skin-stroke" d="M287 332c-11 31-24 61-46 91"/>
+              <path class="shoe" d="M368 416c10 2 25 14 36 25 4 4 1 11-5 11h-42c-8 0-11-9-6-15z"/>
+              <path class="shoe" d="M251 412c-8 4-27 18-39 28-5 4-2 12 4 12h43c8 0 12-9 7-15z"/>
+            </g>
+          </svg>
+
+          <div class="floating-card card-heart">
+            <span class="mini-icon coral" aria-hidden="true">♥</span>
+            <span><strong>+ energia</strong><small>para o seu dia</small></span>
+          </div>
+          <div class="floating-card card-time">
+            <span class="mini-icon green" aria-hidden="true">15</span>
+            <span><strong>minutos</strong><small>já são um começo</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Mensagem principal">
+      <div class="container trust-content">
+        <p>Não precisa ser perfeito.</p>
+        <span aria-hidden="true"></span>
+        <strong>Precisa ser possível.</strong>
+      </div>
+    </section>
+
+    <section class="section benefits" id="beneficios">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Por que se movimentar?</p>
+            <h2>Um hábito, muitos <em>benefícios.</em></h2>
+          </div>
+          <p>Atividade física regular pode transformar a forma como você se sente no presente e apoiar sua saúde no futuro.</p>
+        </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card benefit-card-featured">
+            <div class="card-number">01</div>
+            <div class="benefit-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 39S8 30 8 18c0-6 4-10 10-10 3 0 5 1 6 4 2-3 4-4 7-4 6 0 10 4 10 10 0 12-17 21-17 21z"/><path d="M14 23h6l3-7 4 13 3-6h5"/></svg>
+            </div>
+            <h3>Protege o corpo</h3>
+            <p>Fortalece músculos e ossos e contribui para o cuidado com a saúde cardiovascular.</p>
+            <span class="card-tag">Força & resistência</span>
+          </article>
+
+          <article class="benefit-card">
+            <div class="card-number">02</div>
+            <div class="benefit-icon peach" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M13 26a12 12 0 0 1 22-7 10 10 0 0 1-3 19H17a9 9 0 0 1-4-17c-1 2-1 3 0 5z"/><path d="M18 29c4 4 8 4 12 0M18 21h.1M30 21h.1"/></svg>
+            </div>
+            <h3>Cuida da mente</h3>
+            <p>Ajuda a aliviar o estresse, favorece o bem-estar e pode melhorar a concentração.</p>
+            <span class="card-tag">Humor & foco</span>
+          </article>
+
+          <article class="benefit-card">
+            <div class="card-number">03</div>
+            <div class="benefit-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M29 8a15 15 0 1 0 11 24A17 17 0 0 1 29 8z"/><path d="M15 13v5M12.5 15.5h5M34 13v4M32 15h4"/></svg>
+            </div>
+            <h3>Melhora o descanso</h3>
+            <p>Uma rotina ativa pode colaborar com um sono mais reparador e mais disposição.</p>
+            <span class="card-tag">Sono & energia</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section start" id="comecar">
+      <div class="container start-grid">
+        <div class="start-panel">
+          <p class="eyebrow light"><span></span> Comece de onde você está</p>
+          <h2>O melhor exercício é aquele que <em>cabe na sua vida.</em></h2>
+          <p>Escolha uma atividade agradável, progrida aos poucos e respeite os sinais do seu corpo. Consistência vale mais que pressa.</p>
+          <div class="quote-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Dez minutos hoje podem ser o primeiro passo para um hábito que dura.</p>
+          </div>
+        </div>
+
+        <ol class="step-list">
+          <li>
+            <span class="step-index">1</span>
+            <div>
+              <h3>Escolha algo prazeroso</h3>
+              <p>Caminhar, dançar, pedalar, nadar ou praticar um esporte: vale o que faz sentido para você.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">2</span>
+            <div>
+              <h3>Comece pequeno</h3>
+              <p>Reserve alguns minutos e aumente duração ou intensidade gradualmente.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">3</span>
+            <div>
+              <h3>Crie um compromisso</h3>
+              <p>Defina dias e horários realistas. Registrar o progresso ajuda a manter o foco.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculadora">
+      <div class="container">
+        <div class="calculator-shell">
+          <div class="calculator-copy">
+            <p class="eyebrow"><span></span> Calculadora de movimento</p>
+            <h2>Como está o seu <em>ritmo semanal?</em></h2>
+            <p>Informe uma rotina que você já faz ou gostaria de fazer. A página calcula o total de minutos e mostra seu progresso.</p>
+
+            <div class="reference-box">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 8v5M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+              <p><strong>Referência geral para adultos:</strong> 150 minutos de atividade moderada ou 75 minutos de atividade vigorosa por semana.</p>
+            </div>
+          </div>
+
+          <div class="calculator-card">
+            <form id="activity-form" novalidate>
+              <div class="field full-field">
+                <label for="name">Como podemos te chamar?</label>
+                <input id="name" name="name" type="text" minlength="2" maxlength="30" placeholder="Ex.: Ana" autocomplete="given-name" required>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="minutes">Minutos por dia</label>
+                  <div class="input-suffix">
+                    <input id="minutes" name="minutes" type="number" inputmode="numeric" min="5" max="300" step="5" placeholder="30" required>
+                    <span>min</span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="days">Dias por semana</label>
+                  <div class="input-suffix">
+                    <input id="days" name="days" type="number" inputmode="numeric" min="1" max="7" step="1" placeholder="5" required>
+                    <span>dias</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field full-field">
+                <label for="intensity">Intensidade principal</label>
+                <div class="select-wrap">
+                  <select id="intensity" name="intensity" required>
+                    <option value="moderada">Moderada — respiração mais rápida</option>
+                    <option value="vigorosa">Vigorosa — respiração intensa</option>
+                  </select>
+                </div>
+              </div>
+
+              <p class="form-error" id="form-error" role="alert" hidden></p>
+
+              <button class="button button-dark submit-button" type="submit">
+                Ver meu resultado
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+
+            <section class="result" id="result" aria-live="polite" hidden>
+              <div class="result-topline">
+                <span class="result-status" id="result-status">Seu resultado</span>
+                <button class="reset-button" id="reset-button" type="button">Refazer</button>
+              </div>
+              <h3 id="result-title">Seu ritmo semanal</h3>
+              <div class="minutes-display">
+                <strong id="weekly-minutes">0</strong>
+                <span>minutos<br>por semana</span>
+              </div>
+              <div class="progress-meta">
+                <span>Progresso da referência</span>
+                <strong id="progress-text">0%</strong>
+              </div>
+              <div class="progress-track" id="progress-track" role="progressbar" aria-label="Progresso da referência semanal" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0">
+                <span id="progress-fill"></span>
+              </div>
+              <p class="result-message" id="result-message"></p>
+              <p class="result-goal" id="result-goal"></p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tip-section" id="dica">
+      <div class="container tip-wrap">
+        <div class="tip-heading">
+          <p class="eyebrow light"><span></span> Um passo por vez</p>
+          <h2>Uma dica simples para <em>hoje.</em></h2>
+          <button class="button button-lime" id="new-tip" type="button">
+            Mostrar outra dica
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2 6M20 5v6h-6"/></svg>
+          </button>
+        </div>
+
+        <article class="tip-card" aria-live="polite">
+          <div class="tip-count" id="tip-count">01 / 05</div>
+          <div class="tip-icon" id="tip-icon" aria-hidden="true">↗</div>
+          <p id="tip-text">Troque uma viagem curta de carro por uma caminhada. Seu corpo e o planeta agradecem.</p>
+          <span class="tip-category" id="tip-category">Movimento no dia a dia</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="safety-note">
+      <div class="container safety-content">
+        <div class="safety-icon" aria-hidden="true">+</div>
+        <div>
+          <h2>Cuide-se durante o caminho</h2>
+          <p>Hidrate-se, use roupas confortáveis e respeite seus limites. Se você tem alguma condição de saúde, sente dor ou está há muito tempo sem se exercitar, busque orientação de um profissional de saúde.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M7 22h7l3.5-10 5 18 3.5-8H33"/></svg>
+        </span>
+        <span>MoveBem</span>
+      </a>
+      <p>Informação que inspira movimento e escolhas mais saudáveis.</p>
+      <a class="back-top" href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom">
+      <p>Projeto educativo sobre atividade física e saúde.</p>
+      <p>Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
